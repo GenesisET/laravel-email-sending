@@ -19,6 +19,8 @@ class EmailController extends Controller
 
         Mail::to($to)->send(new Email($data));
 
-        return "successful";
+        return [
+            "success" => true
+        ];
     }
 }
